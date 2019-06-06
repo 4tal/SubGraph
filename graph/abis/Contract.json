@@ -1,0 +1,46 @@
+[
+  {
+    "constant": false,
+    "inputs": [
+      { "name": "_amount", "type": "uint256" },
+      { "name": "_joinUser", "type": "address" }
+    ],
+    "name": "joinCampaign",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      { "name": "relevantNumber", "type": "uint256" },
+      { "name": "_moderator", "type": "address" },
+      { "name": "_owner", "type": "address" }
+    ],
+    "name": "createCampaign",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": false, "name": "relevantNumber", "type": "uint256" },
+      { "indexed": false, "name": "owner", "type": "address" },
+      { "indexed": false, "name": "moderator", "type": "address" }
+    ],
+    "name": "CampaignCreated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": false, "name": "amount", "type": "uint256" },
+      { "indexed": false, "name": "joinUser", "type": "address" }
+    ],
+    "name": "CampaignJoined",
+    "type": "event"
+  }
+]

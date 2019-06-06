@@ -1,0 +1,15 @@
+type Campaign @entity {
+  id: ID!
+  _web3: Bytes! # address
+  _moderator: Bytes! # address
+  _owner: Bytes! # address
+  _campaign: Bytes! # address
+  _joined: [Join!]
+}
+
+type Join @entity {
+  id: ID!
+  _amount: BigInt! # address
+  _campaign: Bytes! # address
+  _idan: Bytes!
+}

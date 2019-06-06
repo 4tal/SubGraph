@@ -1,0 +1,26 @@
+specVersion: 0.0.1
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Contract
+    network: ropsten
+    source:
+      address: "0xdcf33d1120d789a83433e6d746cc67425b9a463f"
+      abi: Contract
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.2
+      language: wasm/assemblyscript
+      entities:
+        - Campaign
+        - Join
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: CampaignCreated(uint256,address,address)
+          handler: handleCampaignCreated
+        - event: CampaignJoined(uint256,address)
+          handler: handleCampaignJoined
+      file: ./src/mapping.ts
